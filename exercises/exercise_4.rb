@@ -33,6 +33,10 @@ yaletown.save()
 puts @mens_stores
 
 (@mens_stores).each do |mens_store|
-  
   puts mens_store.name
+  puts mens_store.annual_revenue
 end
+
+@womens_stores_less_1mil = Store.where(womens_apparel: true, annual_revenue: ..1000000).load
+
+puts @womens_stores_less_1mil
